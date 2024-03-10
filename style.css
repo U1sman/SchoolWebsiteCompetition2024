@@ -1,0 +1,160 @@
+.fill {
+  --color: yellow;
+  --hover: #40ff00;
+}
+
+.pulse {
+  --color: #ef6eae;
+  --hover: #ef8f6e;
+}
+
+.close {
+  --color: #ff7f82;
+  --hover: #ffdc7f;
+}
+
+.raise {
+  --color: #a972cb;
+  --hover: #cb72aa;
+}
+
+.up {
+  --color: #e4cb58;
+  --hover: #94e458;
+}
+
+.slide {
+  --color: #8fc866;
+  --hover: #66c887;
+}
+
+.offset {
+  --color: #19bc8b;
+  --hover: #1973bc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 27px;
+  font-weight: bold;
+  text-align: left;
+  text-align: center;
+}
+
+p {
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+}
+
+img {
+  border: 3px solid black;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 550px 1000px;
+}
+.container header {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/robot1-background.jpeg);
+  background-size: 1410px;
+  background-position: center;
+  height: 550px;
+  border-bottom: 10px solid black;
+  padding: 0px;
+  margin: 0px;
+  display: grid;
+  grid-template-columns: repeat(5, 280px);
+  grid-template-rows: repeat(3, 183.33);
+  /* BUTTON*/
+}
+.container header span {
+  color: rgb(50, 44, 44);
+}
+.container header h1 {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 50px;
+}
+.container header .fill:hover,
+.container header .fill:focus {
+  box-shadow: inset 0 0 0 2em var(--hover);
+  cursor: pointer;
+}
+.container header button {
+  color: var(--color);
+  transition: 0.25s;
+}
+.container header button:hover, .container header button:focus {
+  border-color: var(--hover);
+  color: #fff;
+}
+.container header button {
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  font-family: sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+}
+.container header .hr7, .container header .hr8, .container header .hr9 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(50, 44, 44);
+  font-size: 50px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+}
+.container header .hr1, .container header .hr2, .container header .hr3, .container header .hr13, .container header .hr14, .container header .hr15 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container header .hr8 {
+  width: 110px;
+}
+.container header .hr9 {
+  margin-right: 150px;
+  margin-left: 0px;
+}
+.container main {
+  display: grid;
+  grid-template-rows: 300px, 1fr, 1fr, 1fr, 1fr, 1fr;
+}
+.container main .s2, .container main .s3, .container main .s4, .container main .s5, .container main .s6 {
+  margin-top: 70px;
+  margin-left: 20px;
+  display: grid;
+  grid-template-columns: 700px 700px;
+}
+.container main .s1 {
+  margin-left: 50px;
+  margin-right: 70px;
+  margin-top: 70px;
+  margin-bottom: 0;
+  background-color: black;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container main .s1 .p1 {
+  color: #fff;
+  text-align: center;
+}
+.container main .p2 {
+  width: 400px;
+  margin-top: 20px;
+}/*# sourceMappingURL=style.css.map */

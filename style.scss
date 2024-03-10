@@ -1,0 +1,167 @@
+$white:#fff;
+$font-h: Verdana, Geneva, Tahoma, sans-serif;
+$font-n: sans-serif;
+$light-black:rgb(50, 44, 44);
+$transp-white: rgb(255, 255, 255, 0.5);
+
+$colors: (
+  fill:  yellow,
+  pulse: #ef6eae, 
+  close: #ff7f82, 
+  raise: #a972cb, 
+  up: #e4cb58, 
+  slide: #8fc866, 
+  offset: #19bc8b
+);
+@each $button, $color in $colors {
+    .#{$button} {
+      --color: #{$color};
+      --hover: #{adjust-hue($color, 45deg)};
+    }
+  }
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 27px; 
+    font-weight: bold; 
+    text-align: left;
+    text-align: center;
+}
+p{
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
+}
+img{
+    border: 3px solid black;
+}
+
+
+.container{
+display: grid;
+grid-template-rows: 550px 1000px;
+
+    header{
+
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/robot1-background.jpeg);
+        background-size:  1410px;
+        background-position: center;
+        height: 550px;
+        border-bottom: 10px solid black;
+        padding: 0px;
+        margin: 0px;
+        display: grid;
+        grid-template-columns: repeat(5, 280px);
+        grid-template-rows: repeat(3, 183.33);
+
+        span{
+            color: $light-black;
+        }
+        h1{
+            background-color: $transp-white;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 50px;
+        }
+
+        /* BUTTON*/
+        .fill:hover,
+        .fill:focus {
+        box-shadow: inset 0 0 0 2em var(--hover);
+        cursor: pointer;
+        }
+        button {  
+            color: var(--color);
+            transition: 0.25s;
+            
+            &:hover,
+            &:focus { 
+              border-color: var(--hover);
+              color: #fff;
+            }
+          }
+          button {
+            background: none;
+            border: 2px solid;
+            font: inherit;
+            font-family: sans-serif;
+            font-weight: 700;
+            line-height: 1;
+            margin: 0.5em;
+            padding: 1em 2em;
+          }
+
+
+        .hr7, .hr8, .hr9{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: $light-black;
+            font-size: 50px;
+            font-family: $font-h;
+            font-weight: 700;
+        }
+        .hr1, .hr2, .hr3, .hr13, .hr14, .hr15{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hr8{
+            width: 110px;
+        }
+        .hr9{
+            margin-right: 150px;
+            margin-left: 0px;
+        }
+        
+        }
+
+    main{
+        display: grid;
+        grid-template-rows: 300px, 1fr, 1fr, 1fr, 1fr, 1fr;
+
+        .s2, .s3, .s4, .s5, .s6{
+            margin-top: 70px;
+            margin-left: 20px;
+
+            display: grid;
+            grid-template-columns: 700px 700px;
+        }
+
+        .s1{
+            margin-left: 50px;
+            margin-right: 70px;
+            margin-top: 70px;
+            margin-bottom: 0;
+            background-color: black;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .p1{
+                color: #fff;
+                text-align: center;
+            }
+        }
+        .p2{
+            width: 400px;
+            margin-top: 20px;
+        }
+
+
+    }
+
+
+}
+
